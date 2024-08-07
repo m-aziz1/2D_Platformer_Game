@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bsedjuf6hpl07"]
+[gd_scene load_steps=6 format=3 uid="uid://bsedjuf6hpl07"]
 
 [ext_resource type="Texture2D" uid="uid://b24xcmnr5et4r" path="res://assets/Background/Brown.png" id="1_2yqt0"]
 [ext_resource type="Texture2D" uid="uid://cla0ylq6el4mf" path="res://assets/Terrain/Terrain (16x16).png" id="2_g65wl"]
 [ext_resource type="PackedScene" uid="uid://de355xmqbrany" path="res://scenes/main_character.tscn" id="3_0t5kn"]
-[ext_resource type="Script" path="res://scenes/main_character.gd" id="4_3sc6o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwf8x"]
 texture = ExtResource("2_g65wl")
@@ -500,4 +499,3 @@ layer_0/tile_data = PackedInt32Array(22, 458752, 10, 21, 458752, 10, 20, 458752,
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_0t5kn")]
 position = Vector2(152, 152)
-script = ExtResource("4_3sc6o")
