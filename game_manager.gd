@@ -1,7 +1,8 @@
 extends Node
+@onready var score_label = %ScoreLabel
 
 var score = 0 #Keep track of points
 
 func increase_score():
 	score += 1
-	print(score) #Prints score to console
+	score_label.text = "Score: " + str(score)
