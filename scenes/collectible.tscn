@@ -1,0 +1,145 @@
+[gd_scene load_steps=21 format=3 uid="uid://j3ytswugfxt5"]
+
+[ext_resource type="Texture2D" uid="uid://cutwvvnrvmru" path="res://assets/Items/Fruits/Melon.png" id="1_1e57n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lay12"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwy5s"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjvb2"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojw2k"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1hm1"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3iqd"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_823yn"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gkhd"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md25m"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aywdp"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuulm"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okyk6"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiflm"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lc4b"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgne3"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25yhx"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdg17"]
+atlas = ExtResource("1_1e57n")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rdym4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lay12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwy5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjvb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojw2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1hm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3iqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_823yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gkhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md25m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aywdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuulm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okyk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiflm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lc4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgne3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25yhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdg17")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ha3bx"]
+radius = 17.8885
+
+[node name="Collectible" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 16)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_rdym4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("CircleShape2D_ha3bx")
