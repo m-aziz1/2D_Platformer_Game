@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd8gkstfeqbhn"]
+
+[ext_resource type="Texture2D" uid="uid://beqrvlvm4qedh" path="res://assets/Background/Yellow.png" id="1_w2d4m"]
+[ext_resource type="Texture2D" uid="uid://jywtx8p0h7o6" path="res://assets/melon-quest.png" id="2_6hygh"]
+
+[node name="MainMenu" type="Node"]
+
+[node name="MenuBackground" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w2d4m")
+stretch_mode = 1
+
+[node name="GameTitle" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -92.5
+offset_right = 284.0
+offset_bottom = -25.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6hygh")
+
+[node name="Level1" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = 83.0
+offset_right = -93.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 1"
+
+[node name="Level2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 96.0
+offset_top = 83.0
+offset_right = 280.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 2"
