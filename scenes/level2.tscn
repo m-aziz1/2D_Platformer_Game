@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://byxh3ukesy4g0"]
+[gd_scene load_steps=10 format=3 uid="uid://byxh3ukesy4g0"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_i4e4t"]
 [ext_resource type="Texture2D" uid="uid://6obehejg84tp" path="res://assets/Background/Pink.png" id="2_pur3k"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://de355xmqbrany" path="res://scenes/main_character.tscn" id="4_xgfgn"]
 [ext_resource type="PackedScene" uid="uid://dc3n8d8vmstss" path="res://scenes/collectible.tscn" id="5_lipmn"]
 [ext_resource type="PackedScene" uid="uid://df26x7bptebr" path="res://scenes/finish.tscn" id="6_dpbp7"]
+[ext_resource type="PackedScene" uid="uid://bd8gkstfeqbhn" path="res://scenes/main_menu.tscn" id="7_pcexc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwf8x"]
 texture = ExtResource("3_xmhii")
@@ -558,6 +559,7 @@ position = Vector2(360, 176)
 
 [node name="Finish" parent="SceneObjects" instance=ExtResource("6_dpbp7")]
 position = Vector2(1768, 352)
+target_scene = ExtResource("7_pcexc")
 
 [node name="ScoreUI" type="CanvasLayer" parent="."]
 
