@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://byxh3ukesy4g0"]
+[gd_scene load_steps=13 format=3 uid="uid://byxh3ukesy4g0"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_i4e4t"]
 [ext_resource type="Texture2D" uid="uid://6obehejg84tp" path="res://assets/Background/Pink.png" id="2_pur3k"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dc3n8d8vmstss" path="res://scenes/collectible.tscn" id="5_lipmn"]
 [ext_resource type="PackedScene" uid="uid://df26x7bptebr" path="res://scenes/finish.tscn" id="6_dpbp7"]
 [ext_resource type="PackedScene" uid="uid://bd8gkstfeqbhn" path="res://scenes/main_menu.tscn" id="7_pcexc"]
+[ext_resource type="Texture2D" uid="uid://db6b31ignfb8k" path="res://assets/Player/heart_sprite.png" id="8_a44pi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwf8x"]
 texture = ExtResource("3_xmhii")
@@ -503,6 +504,16 @@ texture = ExtResource("3_xmhii")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vwf8x")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f383a"]
+bg_color = Color(0.442988, 0.590335, 0.915352, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gyia"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Node" type="Node"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -564,16 +575,57 @@ target_scene = ExtResource("7_pcexc")
 [node name="ScoreUI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="ScoreUI"]
-offset_left = 64.0
-offset_top = 63.0
-offset_right = 205.0
-offset_bottom = 112.0
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 213.0
+offset_bottom = 116.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f383a")
 
 [node name="ScoreLabel" type="Label" parent="ScoreUI/Panel"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_right = 143.0
-offset_bottom = 50.0
+offset_right = 157.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
 text = "Score: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="ScoreUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 88.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0gyia")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScoreUI/Panel2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 56.0
+alignment = 1
+
+[node name="heart" type="TextureRect" parent="ScoreUI/Panel2/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_a44pi")
+expand_mode = 2
+
+[node name="heart2" type="TextureRect" parent="ScoreUI/Panel2/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_a44pi")
+expand_mode = 2
+
+[node name="heart3" type="TextureRect" parent="ScoreUI/Panel2/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_a44pi")
+expand_mode = 2
